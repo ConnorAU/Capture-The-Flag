@@ -1,0 +1,35 @@
+/*
+ *	Written by Connor (https://steamcommunity.com/id/_connor)
+ *
+ *	This work is licensed under Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0) 
+ *	License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+ *
+ *	Please refrain from modifying or removing this comment block.
+ */
+
+#include "configs\CaptureTheFlag.cpp"
+
+#include "configs\debriefing.cpp"
+#include "configs\disabledcommands.cpp"
+#include "configs\remoteExec.cpp"
+#include "configs\sounds.cpp"
+
+#include "userinterface\_defines.sqf"
+#include "userinterface\resources.cpp"
+#include "userinterface\resources_custom.cpp"
+
+#include "scripts\config.cpp"
+
+#include "userinterface\controls_and_rules.cpp"
+#include "userinterface\playerMenu.cpp"
+#include "userinterface\settings.cpp"
+#include "userinterface\teamKilled.cpp"
+#include "userinterface\clothingShop.cpp"
+#include "userinterface\skillShop.cpp"
+#include "userinterface\vehicleShop.cpp"
+#include "userinterface\weaponShop.cpp"
+
+class RscTitles {
+	#include "userinterface\HUD_Master.cpp"
+	#include "userinterface\hitmarker.cpp"
+};

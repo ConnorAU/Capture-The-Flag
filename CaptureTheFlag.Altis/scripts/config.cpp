@@ -1,0 +1,15 @@
+class CfgScripts {
+	#include "evh\config.cpp"
+	#include "groups\config.cpp"
+	#include "map\config.cpp"
+	#include "medical\config.cpp"
+	#include "round\config.cpp"
+	#include "session\config.cpp"
+	#include "settings\config.cpp"
+	#include "setup\config.cpp"
+	#include "shop\config.cpp"
+	#include "skill\config.cpp"
+	#include "spawn\config.cpp"
+	#include "system\config.cpp"
+	#include "ui\config.cpp"
+};
