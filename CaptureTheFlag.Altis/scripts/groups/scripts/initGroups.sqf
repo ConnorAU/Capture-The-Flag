@@ -25,9 +25,9 @@ CHECK(!hasInterface)
 
 	// Add event handlers to display
 	private ["_down", "_up"];
-	_down   = _display displayAddEventHandler ["KeyDown", "["OnKeyDown", _this] call BIS_fnc_dynamicGroups;"];
-	//_up     = _display displayAddEventHandler ["KeyUp", "["OnKeyUp", _this] call BIS_fnc_dynamicGroups;"];
-	_up     = _display displayAddEventHandler ["KeyUp", "uiNamespace setVariable ["BIS_dynamicGroups_keyDownTime", nil]"];
+	_down   = _display displayAddEventHandler ["KeyDown", '["OnKeyDown", _this] call BIS_fnc_dynamicGroups;'];
+	//_up     = _display displayAddEventHandler ["KeyUp", '["OnKeyUp", _this] call BIS_fnc_dynamicGroups;'];
+	_up     = _display displayAddEventHandler ["KeyUp", 'uiNamespace setVariable ["BIS_dynamicGroups_keyDownTime", nil]'];
 
 	// Store in ui namespace
 	missionNamespace setVariable [_varName, [_down, _up]];
