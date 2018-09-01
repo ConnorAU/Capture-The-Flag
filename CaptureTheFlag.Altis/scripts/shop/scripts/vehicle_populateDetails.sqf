@@ -50,7 +50,7 @@ _selectedImage ctrlSetText getText(configFile >> "CfgVehicles" >> _class >> "edi
 
 _selectedDetails ctrlSetStructuredText parsetext ([
 		"Name: "+_name,
-		"Price: <t color='#'"+(["FFB1A8","CCFFCC"] select (CaptureTheFlag_session_currency >= _price))+">$"+(_price call CaptureTheFlag_c_system_numberText)+"</t>",
+		"Price: <t color='#"+(["FFB1A8","CCFFCC"] select (CaptureTheFlag_session_currency >= _price))+"'>$"+(_price call CaptureTheFlag_c_system_numberText)+"</t>",
 		"Seats: "+_seats,
 		if (_weapons in ["","Horn"]) then {""} else {"Weapons: "+_weapons}
 ] joinString "<br/>");
