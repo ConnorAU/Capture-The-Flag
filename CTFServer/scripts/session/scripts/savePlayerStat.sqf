@@ -16,7 +16,7 @@ params [
 ];
 if ("" in [_uid,_statRef]) exitwith {};
 
-if extDB3_var_loaded then {
+if (call extDB3_var_loaded) then {
 	[["updatePlayerDataStat",[_statRef,_uid]]call CaptureTheFlag_s_mysql_formatQuery,1] call CaptureTheFlag_s_mysql_extdbCall;
 	//[_side,_uid] call CaptureTheFlag_s_session_savePlayerTime;
 } else {

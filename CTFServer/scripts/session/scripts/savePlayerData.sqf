@@ -16,7 +16,7 @@ params [
 ];
 if (0 in [_type,_packet,_side]) exitwith {};
  
-if extDB3_var_loaded then {
+if (call extDB3_var_loaded) then {
 	// Select correct query and sync
 	[[["updatePlayerDataSettCore","updatePlayerDataSettOpti" + (["B","O"] select ([west,	east] find _side))]select _type,_packet] call CaptureTheFlag_s_mysql_formatQuery,1] 	call CaptureTheFlag_s_mysql_extdbCall;
 	[_side,_packet select (count _packet - 1)] call CaptureTheFlag_s_session_savePlayerTime;

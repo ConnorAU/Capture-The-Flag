@@ -12,7 +12,7 @@
 #include "..\defines.sqf"
 
 if (isNil{uiNamespace getVariable "CaptureTheFlag_mysql_sessionID"}) then {
-	if !extDB3_var_loaded exitwith {
+	if !(call extDB3_var_loaded) exitwith {
 		//call CODE_LOCKSERVER;
 		false
 	};
@@ -24,7 +24,7 @@ if (isNil{uiNamespace getVariable "CaptureTheFlag_mysql_sessionID"}) then {
 			["Error",_result] call LOG_CODE;
 		#endif
 		//call CODE_LOCKSERVER;
-		extDB3_var_loaded = false;
+		extDB3_var_loaded = compilefinal "false";
 		false
 	};
 	["Setup","Connected to database"] call LOG_CODE;
@@ -39,7 +39,7 @@ if (isNil{uiNamespace getVariable "CaptureTheFlag_mysql_sessionID"}) then {
 			["ERROR",_result] call LOG_CODE;
 		#endif
 		//call CODE_LOCKSERVER;
-		extDB3_var_loaded = false;
+		extDB3_var_loaded = compilefinal "false";
 		false
 	};
 

@@ -9,7 +9,9 @@
 
 // Load required extensions
 diag_log parsetext " ";
-missionNamespace setVariable ["extDB3_var_loaded",("extDB3" callExtension "9:VERSION") != ""];
+if (isNil "extDB3_var_loaded") then {
+	missionNamespace setVariable ["extDB3_var_loaded",compileFinal str (("extDB3" callExtension "9:VERSION") != "")];
+};
 diag_log parsetext " ";
 
 // Exit init if script cfg is missing

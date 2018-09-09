@@ -16,7 +16,7 @@ params [
 ];
 if ("" in [_uid,_statVal,_statRef]) exitwith {};
  
-if extDB3_var_loaded then {
+if (call extDB3_var_loaded) then {
 	[["updatePlayerDataSkill",[_statRef,_statVal,_uid]]call CaptureTheFlag_s_mysql_formatQuery,1] call CaptureTheFlag_s_mysql_extdbCall;
 } else {
 	private _pdb = GVAR(PDB_VAR_PLAYER_SKILLS(_uid),[]);

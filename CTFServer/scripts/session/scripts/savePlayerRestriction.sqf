@@ -15,7 +15,7 @@ params [
 ];
 if ("" in [_restriction,_uid]) exitwith {};
  
-if extDB3_var_loaded then {
+if (call extDB3_var_loaded) then {
 	[["updatePlayerDataInfo",["join_game_restriction",_restriction,_uid]]call CaptureTheFlag_s_mysql_formatQuery,1] call CaptureTheFlag_s_mysql_extdbCall;
 } else {
 	//SVAR(PDB_VAR_PLAYER_INFO(_uid),[_restriction]);

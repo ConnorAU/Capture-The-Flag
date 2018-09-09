@@ -8,7 +8,7 @@
 #include "..\defines.sqf"
 scriptName "CTF: Execute DB Query";
 
-if !extDB3_var_loaded exitwith {};
+if !(call extDB3_var_loaded) exitwith {};
 
 params [
 	["_queryStmt","",[""]],

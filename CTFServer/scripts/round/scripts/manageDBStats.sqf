@@ -9,7 +9,7 @@
 
 
 params [["_mode","",[""]],["_param",[]]];
-if !extDB3_var_loaded exitwith {}; // We don't save round stats to the server profile
+if !(call extDB3_var_loaded) exitwith {}; // We don't save round stats to the server profile
 if (isNil "CaptureTheFlag_round_reservedStatsID" && {_mode != "init"}) exitwith {};
 switch _mode do {
 	case "init":{

@@ -23,7 +23,7 @@ params [
 if ("" in [_uid,_name,_netid] OR _sendTo < 3) exitwith {};
 
 // Get info from the db (we do this first incase the player needs to be inserted into the db)
-private _playerData = if extDB3_var_loaded then {
+private _playerData = if (call extDB3_var_loaded) then {
 	["fetchPlayerData:"+_uid,2] call CaptureTheFlag_s_mysql_extDBCall;
 } else {
 	private _pdb = [];
