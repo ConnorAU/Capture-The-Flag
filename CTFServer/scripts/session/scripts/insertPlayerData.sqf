@@ -20,8 +20,7 @@ params [
 if ("" in [_uid,_name] OR _sendTo < 3 OR (missionNamespace getVariable ["CaptureTheFlag_session_insertingID_"+_uid,false])) exitwith {};
 missionNamespace setVariable ["CaptureTheFlag_session_insertingID_"+_uid,true];
 
-
-if extDB3_var_loaded then {
+if (call extDB3_var_loaded) then {
 	// Expect returns to ensure the data is there before we request it again
 	[["insertPlayerData1:",[
 		_uid,
