@@ -61,7 +61,15 @@ The mission was built to use [extDB3](https://bitbucket.org/torndeco/extdb3), ho
 The purpose of using extDB3 is if you wish to host multiple servers with linked stats, or if you wish to display player statistics (kills, assists, headshots, etc) on a website.
 1. Use this [database setup](https://github.com/ConnorAU/Capture-The-Flag/blob/master/database.sql) to create the schema
 2. Create an account and make sure it has SELECT, INSERT and UPDATE permissions to the schema
-3. Fill out the extDB3 config with your database credentials
+3. Fill out the extDB3 config with your database credentials 
+```ini
+[CaptureTheFlag]
+IP = yourIP
+Port = yourPort
+Username = yourUsername
+Password = yourPassword
+Database = yourSchemaName
+```
 4. Place the [CaptureTheFlag.ini](https://github.com/ConnorAU/Capture-The-Flag/blob/master/CaptureTheFlag.ini) in `@extDB3\sql_custom`
 5. Add extDB3 to the -serverMod parameter in the command line `-serverMod=@CTFServer;@extDB3`
 
