@@ -74,7 +74,10 @@ Database = yourSchemaName
 5. Add extDB3 to the -serverMod parameter in the command line `-serverMod=@CTFServer;@extDB3`
 
 
-
 # License
 This work is licensed under Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).
 License: https://creativecommons.org/licenses/by-nc-sa/4.0/
+
+
+# Contact Me
+If you have any questions about this mission, you can contact me on discord: https://discord.gg/DMkxetD
